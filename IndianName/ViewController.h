@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    IBOutlet UIDatePicker *birthDayPicker;
+    NSArray *yearWord;
+    NSArray *monthWord;
+    NSArray *dayWord;
+}
+
+@property (nonatomic, retain) UIDatePicker *birthDayPicker;
+
+-(IBAction)sendButtonTapped:(id)sender;
 
 @end

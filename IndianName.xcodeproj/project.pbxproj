@@ -22,14 +22,14 @@
 		6333E91614BD603A00A6C8CF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6333E91814BD603A00A6C8CF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6333E91A14BD603A00A6C8CF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		6333E91E14BD603A00A6C8CF /* IndianName-Info.plist */ = {isa = PBXFileReference; path = "IndianName-Info.plist"; sourceTree = "<group>"; };
+		6333E91E14BD603A00A6C8CF /* IndianName-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IndianName-Info.plist"; sourceTree = "<group>"; };
 		6333E92014BD603A00A6C8CF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6333E92214BD603A00A6C8CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6333E92414BD603A00A6C8CF /* IndianName-Prefix.pch */ = {isa = PBXFileReference; path = "IndianName-Prefix.pch"; sourceTree = "<group>"; };
-		6333E92514BD603A00A6C8CF /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		6333E92414BD603A00A6C8CF /* IndianName-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IndianName-Prefix.pch"; sourceTree = "<group>"; };
+		6333E92514BD603A00A6C8CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6333E92614BD603A00A6C8CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6333E92914BD603A00A6C8CF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		6333E92B14BD603A00A6C8CF /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		6333E92B14BD603A00A6C8CF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		6333E92C14BD603A00A6C8CF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

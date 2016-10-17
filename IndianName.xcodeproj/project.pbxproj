@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		6333E92714BD603A00A6C8CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6333E92614BD603A00A6C8CF /* AppDelegate.m */; };
 		6333E92A14BD603A00A6C8CF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6333E92814BD603A00A6C8CF /* MainStoryboard.storyboard */; };
 		6333E92D14BD603A00A6C8CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6333E92C14BD603A00A6C8CF /* ViewController.m */; };
+		63EB75661DB504D6002C5A46 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63EB75651DB504D6002C5A46 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		6333E92914BD603A00A6C8CF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		6333E92B14BD603A00A6C8CF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		6333E92C14BD603A00A6C8CF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		63EB75651DB504D6002C5A46 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +81,11 @@
 			children = (
 				6333E92514BD603A00A6C8CF /* AppDelegate.h */,
 				6333E92614BD603A00A6C8CF /* AppDelegate.m */,
-				6333E92814BD603A00A6C8CF /* MainStoryboard.storyboard */,
 				6333E92B14BD603A00A6C8CF /* ViewController.h */,
 				6333E92C14BD603A00A6C8CF /* ViewController.m */,
 				6333E91D14BD603A00A6C8CF /* Supporting Files */,
+				63EB75651DB504D6002C5A46 /* Launch Screen.storyboard */,
+				6333E92814BD603A00A6C8CF /* MainStoryboard.storyboard */,
 			);
 			path = IndianName;
 			sourceTree = "<group>";
@@ -125,10 +128,10 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0420;
-				ORGANIZATIONNAME = KTH;
+				ORGANIZATIONNAME = VerandaStudio;
 			};
 			buildConfigurationList = 6333E90C14BD603A00A6C8CF /* Build configuration list for PBXProject "IndianName" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -149,6 +152,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63EB75661DB504D6002C5A46 /* Launch Screen.storyboard in Resources */,
 				6333E92114BD603A00A6C8CF /* InfoPlist.strings in Resources */,
 				6333E92A14BD603A00A6C8CF /* MainStoryboard.storyboard in Resources */,
 			);
@@ -209,7 +213,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -227,7 +231,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -237,9 +241,12 @@
 		6333E93114BD603A00A6C8CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = CBUJK8CFZ3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IndianName/IndianName-Prefix.pch";
 				INFOPLIST_FILE = "IndianName/IndianName-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.verandastudio.IndianName;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -248,9 +255,12 @@
 		6333E93214BD603A00A6C8CF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = CBUJK8CFZ3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IndianName/IndianName-Prefix.pch";
 				INFOPLIST_FILE = "IndianName/IndianName-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.verandastudio.IndianName;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -275,6 +285,7 @@
 				6333E93214BD603A00A6C8CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

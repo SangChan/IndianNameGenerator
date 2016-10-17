@@ -27,18 +27,18 @@
     NSDateComponents *com;
     
     com = [[NSDateComponents alloc] init];
-    [com setYear:1982];
-    [com setMonth:1];
-    [com setDay:1];
-    [com setHour:00];
-    [com setMinute:00];
-    [com setSecond:00];
+    com.year = 1982;
+    com.month = 1;
+    com.day = 1;
+    com.hour = 00;
+    com.minute = 00;
+    com.second = 00;
     
     date = [[NSCalendar currentCalendar] dateFromComponents:com];
     
-    [birthDayPicker setDate:date];
+    birthDayPicker.date = date;
     
-    yearWord = [[NSArray alloc]initWithObjects:@"시끄러운(말많은)",
+    yearWord = @[@"시끄러운(말많은)",
                 @"푸른",
                 @"어두운(적색)",
                 @"조용한",
@@ -47,10 +47,9 @@
                 @"지혜로운",
                 @"용감한",
                 @"날카로운",
-                @"욕심많은",
-                nil];
+                @"욕심많은"];
     
-    monthWord = [[NSArray alloc]initWithObjects:@"늑대",
+    monthWord = @[@"늑대",
                 @"태양",
                 @"양",
                 @"매",
@@ -61,10 +60,9 @@
                 @"말",
                 @"돼지",
                 @"하늘",
-                @"바람",
-                nil];
+                @"바람"];
     
-    dayWord = [[NSArray alloc]initWithObjects:@"~와(과) 함께춤을",
+    dayWord = @[@"~와(과) 함께춤을",
                @"의 기상",
                @"은(는) 그림자속에",
                @" ",
@@ -94,10 +92,9 @@
                @"와(과)같은 사나이",
                @"의 심판자",
                @"의 혼 ",
-               @"은(는) 말이없다.",
-               nil];
+               @"은(는) 말이없다."];
     
-    NSLog(@"%@",[yearWord description]);
+    NSLog(@"%@",yearWord.description);
 }
 
 - (void)viewDidUnload
@@ -136,38 +133,31 @@
 # pragma mark IBAction
 
 -(IBAction)sendButtonTapped:(id)sender {
-    NSLog(@"%d",(NSInteger)[birthDayPicker date]);
+    NSLog(@"%d",(NSInteger)birthDayPicker.date);
     NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
-    [outputFormatter setDateFormat:@"yyyy/MM/dd"];
-    NSString *date = [outputFormatter stringFromDate:[birthDayPicker date]];
+    outputFormatter.dateFormat = @"yyyy/MM/dd";
+    NSString *date = [outputFormatter stringFromDate:birthDayPicker.date];
     NSLog(@"%@",date);
-    NSArray *dateArray = [date pathComponents];
-    NSLog(@"%@",[dateArray description]);
+    NSArray *dateArray = date.pathComponents;
+    NSLog(@"%@",dateArray.description);
     
-    int iYear = [[dateArray objectAtIndex:0]intValue];
-    int iMonth = [[dateArray objectAtIndex:1]intValue];
-    int iDate = [[dateArray objectAtIndex:2]intValue];
+    int iYear = [dateArray[0]intValue];
+    int iMonth = [dateArray[1]intValue];
+    int iDate = [dateArray[2]intValue];
     
     
-    NSLog(@"이름1: %@",[yearWord objectAtIndex:iYear%10]);
-    NSLog(@"이름2: %@",[monthWord objectAtIndex:iMonth-1]);
-    NSLog(@"이름3: %@",[dayWord objectAtIndex:iDate-1]);
+    NSLog(@"이름1: %@",yearWord[iYear%10]);
+    NSLog(@"이름2: %@",monthWord[iMonth-1]);
+    NSLog(@"이름3: %@",dayWord[iDate-1]);
 
     
     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"인디언 이름" 
-                                                   message:[NSString stringWithFormat:@"%@ %@ %@",[yearWord objectAtIndex:iYear%10],[monthWord objectAtIndex:iMonth-1],[dayWord objectAtIndex:iDate-1]]
+                                                   message:[NSString stringWithFormat:@"%@ %@ %@",yearWord[iYear%10],monthWord[iMonth-1],dayWord[iDate-1]]
                                                   delegate:self 
                                          cancelButtonTitle:@"OK" 
                                          otherButtonTitles:nil];
     
     [alert show];
-    //NSString * theMessage = [NSString stringWithFormat:@"I'm %@ and feeling %@",[activities objectAtIndex:[tweetPicker selectedRowInComponent:0]],[feelings objectAtIndex:[tweetPicker selectedRowInComponent:1]]];
-    //NSLog(@"button tapped : %@",theMessage);
-    
-    //TWTweetComposeViewController *tv = [[TWTweetComposeViewController alloc]init];
-    //[tv setInitialText:theMessage];
-    //[tv presentModalViewController:self animated:YES];
-    //[self presentModalViewController:tv animated:YES];
 }
 
 
